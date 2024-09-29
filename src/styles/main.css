@@ -1,53 +1,57 @@
-
-.container{
+.container {
     display: flex;
     flex-direction: column;
     height: 100vh;
     background-image: url("../images/wall.png");
 }
 
-.menu{
+.menu {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
     height: 90px;
     width: 100%;
     background-color: #000;
     color: #fff;
     border-bottom: 5px solid #daa520;
 }
-.menu-time h2 {
-    margin-top: 5%;
-}
-.menu-score h2 {
+
+.menu-time h2, .menu-score h2 {
     margin-top: 5px;
 }
 
-.menu-lives{
+.menu-lives {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.panel{
+.panel {
     margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
-.square{
+/* Estilos para os botões do painel */
+.square {
     height: 150px;
     width: 150px;
     border-radius: 15px;
     background-color: #ffe4c4;
     margin: 10px;
-    box-shadow:6px 8px 7px rgb(0, 0, 0);
+    box-shadow: 6px 8px 7px rgb(0, 0, 0);
+    border: none; /* Remover borda padrão de botão */
+    cursor: pointer; /* Mostrar que o elemento é clicável */
+    font-size: 0; /* Remover qualquer texto interno */
 }
 
-.enemy{
+/* Remover estilo padrão do botão para parecer com div */
+.square:focus {
+    outline: none;
+}
+
+.enemy {
     background-image: url("../images/ralph.png");
     background-size: cover;
 }

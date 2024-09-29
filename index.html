@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,49 +17,54 @@
 </head>
 
 <body>
+    <header>
+        <h1 class="sr-only">Detona Ralph - Jogo</h1> <!-- Título oculto para leitores de tela -->
+    </header>
 
-    <div class="container">
-        <div class="menu">
-            <div class="menu-time">
-                <h2 style="color:red;">Time Left</h2>
-                <h2 id="time-left">0</h2>
-            </div>    
-            
-            <div class="menu-score">
-                <h2 style="color:red;">Your Score</h2>
-                <h2 id="score">0</h2>                
-            </div>
+    <main class="container">
+        <section class="menu" aria-label="Menu do jogo">
+            <article class="menu-time" aria-live="polite">
+                <h2 style="color:red;">Tempo Restante</h2>
+                <p id="time-left" aria-label="Tempo restante: 0 segundos">0</p>
+            </article>
 
-            <div class="menu-lives">
-                <img src="./src/images/player.png" alt="player" height=" 60px">
-                <h3>x3</h3>
-            </div>
+            <article class="menu-score" aria-live="polite">
+                <h2 style="color:red;">Sua Pontuação</h2>
+                <p id="score" aria-label="Pontuação atual: 0">0</p>
+            </article>
 
-        </div>
+            <article class="menu-lives" aria-label="Vidas restantes">
+                <img src="./src/images/player.png" alt="Personagem jogador" height="60px">
+                <p aria-label="Vidas: 3">x3</p>
+            </article>
+        </section>
 
-        <div class="panel">
+        <section class="panel" aria-label="Painel do jogo">
             <div class="panel-row">
-                <div class="square enemy" id="1"></div>
-                <div class="square" id="2"></div>
-                <div class="square" id="3"></div>
+                <button class="square enemy" id="1" aria-label="Quadrado 1"></button>
+                <button class="square" id="2" aria-label="Quadrado 2"></button>
+                <button class="square" id="3" aria-label="Quadrado 3"></button>
             </div>
-            
+
             <div class="panel-row">
-                <div class="square" id="4"></div>
-                <div class="square" id="5"></div>
-                <div class="square" id="6"></div>
+                <button class="square" id="4" aria-label="Quadrado 4"></button>
+                <button class="square" id="5" aria-label="Quadrado 5"></button>
+                <button class="square" id="6" aria-label="Quadrado 6"></button>
             </div>
-            
+
             <div class="panel-row">
-                <div class="square" id="7"></div>
-                <div class="square" id="8"></div>
-                <div class="square" id="9"></div>
+                <button class="square" id="7" aria-label="Quadrado 7"></button>
+                <button class="square" id="8" aria-label="Quadrado 8"></button>
+                <button class="square" id="9" aria-label="Quadrado 9"></button>
             </div>
+        </section>
+    </main>
 
-        </div>
+    <footer>
+        <p class="sr-only">Desenvolvido por [Seu Nome]</p> <!-- Apenas para leitores de tela -->
+    </footer>
 
-    </div>    
-
-    <script  defer src="./src/scripts/engine.js"></script>
+    <script defer src="./src/scripts/engine.js"></script>
 </body>
+
 </html>
